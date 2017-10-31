@@ -1,0 +1,15 @@
+<html>
+    <head>
+      <title>My Angular App!</title>
+    </head>
+    <body ng-app="flapperNews">
+      <div ng-controller="MainCtrl">
+        <div ng-repeat="name in names">
+          {{name.userName}}
+        </div>
+      </div>
+      <script src="./bower_components/angular/angular.js"></script>
+      <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="./user/user.controller.js"></script>
+    </body>
+  </html>

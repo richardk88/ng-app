@@ -1,0 +1,17 @@
+{
+  "name": "flappernews",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "richardk88 <richardk88@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
