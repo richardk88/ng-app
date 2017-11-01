@@ -1,0 +1,28 @@
+<div>
+    <div id='form'>
+            <form class='card' style="width: 40rem;" ng-submit="vmUsers.createUser(newUser)">
+                <h3>Add New User</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type='text' class="form-control" placeholder="name" name='name' ng-model='newUser.name' required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type='text' class="form-control" placeholder="email" name='email' ng-model='newUser.email' required>  
+                    </div>
+                </div>
+                <button type='submit' class="btn btn-dark">Add</button>
+            </form>
+        </div>
+    <div class='user-container'>
+        <div ng-repeat='user in vmUsers.users'>
+                <div class='card' style="width: 20rem;">
+                    <img ng-src='https://robohash.org/{{ user.name }}.png?size=200x200'class="card-img-top"/>
+                    <div class="card-body">
+                        <p>Name: {{ user.name }}</p>
+                        <p>Email: {{ user.email}}</p>
+                    </div>
+                    <button type='submit' class="btn btn-danger" ng-click='vmUsers.deleteUser(user)'>(x)</button>
+                </div>
+        </div>
+    </div>
+</div>

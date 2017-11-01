@@ -1,15 +1,21 @@
 <html>
     <head>
       <title>My Angular App!</title>
+      <link rel='stylesheet' href='/style.css'/>
     </head>
-    <body ng-app="flapperNews">
-      <div ng-controller="MainCtrl">
-        <div ng-repeat="name in names">
-          {{name.userName}}
-        </div>
-      </div>
+    <body ng-app="myApp">
+      
+      <h1>Angular App</h1>
+      
+      <ui-view></ui-view>
+
       <script src="./bower_components/angular/angular.js"></script>
       <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="./bower_components/lodash/dist/lodash.js"></script>
+      <script src="./user/user.module.js"></script>
+      <script src="./user/user.route.js"></script>
       <script src="./user/user.controller.js"></script>
+      <script src="./user/user.service.js"></script>
+
     </body>
   </html>
