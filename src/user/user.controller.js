@@ -26,6 +26,7 @@
 
     function createNewUser(newUser) {
       return userService.createNewUser(newUser).then(function(res) {
+        console.log(res.data)
         vmUsers.users.push(res.data);
         vmUsers.newUser = {};
         $scope.newUser.name = '';
