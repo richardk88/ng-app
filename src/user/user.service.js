@@ -13,7 +13,7 @@
         }
 
         function getUsers () {
-            return $http.get('http://jsonplaceholder.typicode.com/users');
+            return $http.get('http://localhost:8080/demo/users');
         }
 
         function createNewUser (newUser) {
