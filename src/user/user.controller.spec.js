@@ -8,7 +8,7 @@ describe('Users Controller', function()   {
         q,
         timeout;
 
-    beforeEach(angular.mock.module('userApp'));
+    beforeEach(angular.mock.module('myApp'));
     beforeEach(inject(function($injector) {
         userService = $injector.get('userService');
         q = $injector.get('$q');
@@ -20,7 +20,7 @@ describe('Users Controller', function()   {
         var users = [{name: "Benjamin", email: "beniscool@gmail.com"}];
         var user = {name: "benjamin", email: "sample email"};
         spyOn(userService, 'getUsers').and.returnValue(q.resolve({data: users}));
-        spyOn(userService, 'createUser').and.returnValue(q.resolve({data: user}));
+        spyOn(userService, 'createNewUser').and.returnValue(q.resolve({data: user}));
         vmUsers = controller('userCtrl', {$scope: scope});
     }));
 
@@ -28,7 +28,7 @@ describe('Users Controller', function()   {
      httpBackend.verifyNoOutstandingExpectation();
      httpBackend.verifyNoOutstandingRequest();
     });
-    
+
     describe('getUsers', function() {
         fit('it should get all users', function() {
             vmUsers.getUsers();
